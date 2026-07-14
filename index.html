@@ -108,15 +108,10 @@
             PRESS</b></button>
 
     <script>
-        const audio = new Audio("assets/sounds/Metal_Pipe.mp3");
-
-        document.getElementById('ExplodeButton').addEventListener('click', () => {
-            audio.play();
-        });
-    </script>
-
-    <script>
         function explode() {
+            const audio = new Audio("assets/sounds/Metal_Pipe.mp3");
+            audio.play();
+
             document.getElementById("whitlegoy_txt").innerHTML = "AAaaaAAaAAAAAaaaaAAaaauuuughghhghhg"
             document.getElementById("whitlegoy_img").src = "../assets/images/explosion.gif"
 
