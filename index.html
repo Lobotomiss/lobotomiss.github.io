@@ -50,8 +50,10 @@
     <div class="sidebar-left" , height="1000px">
 
 
-        <img id="glitter_left" src="assets/images/glitter.gif" width="200px"
-            style="  position: fixed; top: 50px; left:0px;">
+        <button onclick="pipe()"><img id="glitter_left" src="assets/images/glitter.gif" width="200px"
+                style="  position: fixed; top: 50px; left:0px;">
+
+        </button>
 
     </div>
 
@@ -61,7 +63,7 @@
 <header>
     <div>
         <br>
-        <h1>Territory of Lobotomiss</h1>
+        <h1 onclick="pipe()">Territory of Lobotomiss</h1>
 
 
         <nav>
@@ -101,12 +103,12 @@
     <img id="whitlegoy_img" src="assets/images/whitle_goy.png">
     <br>
 
-    <button onclick="explode()" style="font-size: 25px; border-radius: 5px"><b>DO NOT
+    <button onclick="explode(), pipe()" style="font-size: 25px; border-radius: 5px"><b>DO NOT
             PRESS</b></button>
 
     <script>
         function explode() {
-            const audio = new Audio('assets/sounds/metal_pipe.mp3');
+            const audio = new Audio('assets/sounds/x_files.mp3');
             audio.play();
 
             document.getElementById("whitlegoy_txt").innerHTML = "AAaaaAAaAAAAAaaaaAAaaauuuughghhghhg"
@@ -115,6 +117,14 @@
 
             document.getElementById("glitter_left").src = "assets/images/sus.gif"
             document.getElementById("glitter_right").src = "assets/images/sus_flip.gif"
+
+        }
+    </script>
+
+    <script>
+        function pipe() {
+            const audio = new Audio('assets/sounds/metal_pipe.mp3');
+            audio.play();
         }
     </script>
 
@@ -122,8 +132,10 @@
 </div>
 <div class="sidebar-right">
 
-    <img id="glitter_right" src="assets/images/glitter.gif" width="200px"
-        style="  position: fixed; top: 50px; right:0px;">
+    <button onclick="pipe()"><img id="glitter_right" src="assets/images/glitter.gif" width="200px"
+            style="  position: fixed; top: 50px; right:0px;">
+
+    </button>
 
 </div>
 
