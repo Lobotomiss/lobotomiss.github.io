@@ -1,51 +1,47 @@
 h1 {
-            color: rgb(0, 0, 0);
-            background-color: rgb(236, 201, 23);
-        }
-        p {
-            color: rgb(0, 0, 0);
-            background-color: rgb(236, 201, 23);
-            
-        }
+  color: rgb(0, 0, 0);
+  background-color: rgb(236, 201, 23);
+}
+p {
+  color: rgb(0, 0, 0);
+  background-color: rgb(236, 201, 23);
+}
 
-        Body {
-        text-align: center;
-        background: #E0E2FF center/cover url("../assets/images/FrogBG.png") repeat;
-        background-color: rgb(236, 201, 23);
-    
-        }
+Body {
+  text-align: center;
+  background: #e0e2ff center/cover url("../assets/images/FrogBG.png") repeat;
+  background-color: rgb(236, 201, 23);
+}
 
-        h2 {
-            text-align: center;
-            color: rgb(0, 0, 0);
-        }
+h2 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
 
-        li {
-        text-align: center;
-        color: rgb(0, 0, 0); 
-        }
-        
-        button{
-            background-color: rgb(233, 200, 35);
-            font-size: 25px; 
-            border-radius: 5px;
-        }
-        
+li {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+button {
+  background-color: rgb(233, 200, 35);
+  font-size: 25px;
+  border-radius: 5px;
+}
+
 .sidebar-left {
-    float: left;
-    width: 30%; /* Adjust width as needed */
-
+  float: left;
+  width: 30%; /* Adjust width as needed */
 }
 
 .main-content {
-    float: left;
-    width: 40%; /* Adjust width as needed */
+  float: left;
+  width: 40%; /* Adjust width as needed */
 }
 
 .sidebar-right {
-    float: right;
-    width: 30%; /* Adjust width as needed */
-
+  float: right;
+  width: 30%; /* Adjust width as needed */
 }
 /*styling for navigationbar*/
 ul {
