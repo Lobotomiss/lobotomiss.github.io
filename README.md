@@ -1,1 +1,0 @@
-Hier gaat de algemene info en update info
