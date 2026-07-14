@@ -1,0 +1,1 @@
+Use if you have front-end JavaScript libraries or additional utility scripts that are not part of the main codebase.

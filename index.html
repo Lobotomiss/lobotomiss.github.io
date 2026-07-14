@@ -1,0 +1,130 @@
+<!-- Dit is de main page !-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Territory of Lobotomiss</title> <!-- Page title (appears in browser tab) -->
+    <link rel="stylesheet" href="assets/styles/home.css">
+    <link rel="icon" href="frog.ico">
+    <style>
+        Body {
+            text-align: center;
+            background-color: rgb(126, 159, 199);
+        }
+
+        button {
+            width: 150px;
+            font-size: 25px;
+            border-radius: 5px;
+        }
+
+        .sidebar-left {
+            text-align: center;
+            background: #E0E2FF center/cover url("assets/images/polkadot_bg_sides.png") repeat;
+            height: 1077px;
+            overflow: auto;
+            padding-top: 1px;
+            margin-top: -1px;
+        }
+
+        .sidebar-right {
+            text-align: center;
+            background: #E0E2FF center/cover url("assets/images/polkadot_bg_sides.png") repeat;
+            height: 1077px;
+            overflow: auto;
+            padding-top: 1px;
+            margin-top: -1px;
+        }
+
+        .main-content {
+            border: 2px solid #1a151b;
+            margin: 0px;
+            overflow: auto;
+            padding-top: 1px;
+            margin-top: -1px;
+        }
+    </style>
+
+    <div class="sidebar-left" , height="1000px">
+
+
+        <img id="glitter_left" src="assets/images/glitter.gif" width="200px"
+            style="  position: fixed; top: 50px; left:0px;">
+
+    </div>
+
+    <div class="main-content">
+</head>
+<!-- Header: Contains logo and navigation -->
+<header>
+    <div>
+        <br>
+        <h1>Territory of Lobotomiss</h1>
+
+
+        <nav>
+            <table style="width: 100%; border-collapse: collapse;" cellpadding="3">
+                <ul align="center" ;>
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="guest.html">GUEST</a></li>
+                    <li><a href="other.html">OTHER</a></li>
+                </ul>
+            </table>
+        </nav>
+    </div>
+</header>
+
+</head>
+
+<body>
+    <h1 style="background-color: rgb(156, 99, 197)"> <b> Homepage </b> </h1>
+    <h2>About myself</h2>
+    <p> I am but a <i>fool</i>, a <i>stupid idiot</i>, trying to become a <b> smart</b> <i>idiot!</i> This website will
+        try to document that journey.
+        <br>
+        I will also use it to spit my interests and rants at you if you are willing to read it :)
+    </p>
+    <h2>Updates</h2>
+    <p> Allas, this website has not lauched yet. (In development since 11-7-2026)</p>
+
+    <h2>Scope goals fase 2</h2>
+    <li><B>HOME: </B>Yassify the home page (this page yay) </li>
+    <li><b>BLOG:</b> Make the blog page (the rant page only one working for now)</li>
+    <li><b>GUEST:</b> list it under construction for now</li>
+    <li><b>Other:</b> list it under construction for now</li>
+    <li><b>SPICE:</b> make the navigation easier</li>
+    <br>
+    <p id="whitlegoy_txt">Please be patient, I'm just a whitle goy.</p>
+    <img id="whitlegoy_img" src="assets/images/whitle_goy.png">
+    <br>
+
+    <button onclick="explode()" style="font-size: 25px; border-radius: 5px"><b>DO NOT
+            PRESS</b></button>
+
+    <script>
+        function explode() {
+            const audio = new Audio('assets/sounds/metal_pipe.mp3');
+            audio.play();
+
+            document.getElementById("whitlegoy_txt").innerHTML = "AAaaaAAaAAAAAaaaaAAaaauuuughghhghhg"
+            document.getElementById("whitlegoy_img").src = "assets/images/explosion.gif"
+
+
+            document.getElementById("glitter_left").src = "assets/images/sus.gif"
+            document.getElementById("glitter_right").src = "assets/images/sus_flip.gif"
+        }
+    </script>
+
+</body>
+</div>
+<div class="sidebar-right">
+
+    <img id="glitter_right" src="assets/images/glitter.gif" width="200px"
+        style="  position: fixed; top: 50px; right:0px;">
+
+</div>
+
+</html>
