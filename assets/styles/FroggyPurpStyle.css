@@ -1,0 +1,31 @@
+h1 {
+            color: rgb(79, 13, 90);
+            background-color: rgb(156, 99, 197);
+        }
+        p {
+            color: rgb(79, 13, 90);
+            text-align: center;
+            
+        }
+
+        Body {
+        text-align: center;
+        background: #E0E2FF center/cover url("../assets/images/FrogBG.png") repeat;
+    
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(79, 13, 90);
+        }
+
+        li {
+        text-align: center;
+        color: rgb(79, 13, 90); 
+        }
+        
+        button{
+            background-color: rgb(156, 99, 197);
+            font-size: 25px; 
+            border-radius: 5px;
+                }

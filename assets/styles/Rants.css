@@ -1,0 +1,78 @@
+h1 {
+            color: rgb(0, 0, 0);
+            background-color: rgba(156, 99, 197, 0);
+        }
+        p {
+            color: rgb(0, 0, 0);
+            text-align: center;
+            
+        }
+
+        Body {
+        text-align: center;
+        background: #E0E2FF center/cover url("../assets/images/FrogBG.png") repeat;
+        background-color: rgba(126, 159, 199, 0);
+    
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+
+        li {
+        text-align: center;
+        color: rgb(79, 13, 90); 
+        }
+        
+        button{
+            background-color: rgba(156, 99, 197, 0);
+            font-size: 25px; 
+            border-radius: 5px;
+                }
+        
+.sidebar-left {
+    float: left;
+    width: 20%; /* Adjust width as needed */
+
+
+}
+
+.main-content {
+    float: left;
+    width: 60%; /* Adjust width as needed */
+    background-color: rgba(174, 129, 196, 0);
+    border-radius: 10px;
+
+}
+
+.sidebar-right {
+    float: right;
+    width: 19.5%; /* Adjust width as needed */
+
+
+}
+
+/*styling for navigationbar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(79, 13, 90);
+  display: flex;
+  justify-content: center;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
