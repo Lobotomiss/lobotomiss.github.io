@@ -16,10 +16,15 @@ h2 {
   text-align: center;
   color: rgb(79, 13, 90);
 }
-
-li {
+h3 {
   text-align: center;
   color: rgb(79, 13, 90);
+}
+
+li {
+  text-align:left 20px;
+  color: rgb(79, 13, 90);
+  list-style-position: inside;
 }
 
 button {
@@ -66,4 +71,5 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
+  list-style-position: inside;
 }

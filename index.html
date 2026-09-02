@@ -48,6 +48,20 @@
             width: 100%;
             height: 100%;
         }
+
+/* test voor toevoegen van formatting binnen het about me block */
+.div-left {
+  float: left;
+  width: 55%; /* Adjust width as needed */
+  border-radius: 10px;
+}
+
+.div-right {
+  float: right;
+  width: 40%; /* Adjust width as needed */
+  border-radius: 10px
+}
+
     </style>
             
     <div class="sidebar-left" , height="1000px">
@@ -81,33 +95,90 @@
         </nav>
     </div>
 </header>
+<img src="assets/images/look_dog.gif">
+<img id="dog_img" src="assets/images/lex.jpg" style="width: 200px;" onmouseover="zoom()" onmouseleave="zoomout()">
+
+
 
 </head>
 
 <body>
     <h1 style="background-color: rgb(156, 99, 197)"> <b> Homepage </b> </h1>
+<!-- About: Contains the about section and the random facts on left and right in srollable fasion -->
+<div style="overflow-y: scroll; align-items: center; height: 200px;">
+<div class="div-left" >
+
     <h2>About myself</h2>
+
+    <h3>Why make this website?</h3>
     <p> I am but a <i>fool</i>, a <i>stupid idiot</i>, trying to become a <b> smart</b> <i>idiot!</i> This website will
         try to document that journey.
         <br>
-        I will also use it to spit my interests and rants at you if you are willing to read it :)
+        I will also use it to spit my interests and rants at you if you are willing to read it :) <br>
+    
+    <h3>Who even am I?</h3>
+    <p>A great question that humanity has pondered over the ages. Cogito ergo sum as they say! With that I will say that I am yet another soul (like you dear reader) with their own internal ego and self perceptions, and as such i think it is most important you make your own opinion about me (It's your human right, so you better use it!). Now to cut the boring monologuing short. I am Lobotomiss/Pineapple (I am currently deciding to not attach any names since i put this stuff on the interwebs), I am 24F, and my hobby's tend to sit on the geeky sides of things. Think things like D&D and video/board games. I have also taken up boulderen (climbing but fancy) and shooting, and I am also trying out calisthenics to hopefully get some muscle on my noodly arms. I also may yap a lot but don't be deceived, at the end of the day I do think people can be a bit scary, so please don't be afraid to talk to me because I am probably as scared as you if not more scared. </p>
+    
+    <h3>Study History</h3>
+    <p><B>It all started when I was born!</B> Just kidding, i'm not going that far back. However, after finishing my admidately shitty middle school, I studied Forensic Lab Research on the van Hall Larenstein where I have learned Tactical Forensics like different crimescene analysis branches, Microbiological Forensics like basic petridish analysis and DNA research, Analytical chemistry and lastly a little bit about Dutch law, all both practical an theory. I have focussed myself mostly on analytical chemistry with an extra interrest in Toxicology, Coding and automation (although the coding and automation went mostly on the background during my internships). After working at Eurofins Heerenveen for a while I had some medical issues caused by the lab work and I decided to follow my interests in IT instead and that is why I now study at the HU. I hope to learn more about servers, coding/softwaredevelopment, cybersecurity and a touch of AI model training. </p>
     </p>
-    <h2>Updates</h2>
-    <p> Allas, this website has not lauched yet. (In development since 11-7-2026)</p>
+    </div>
+    <div class="div-right">
+        <h2>Silly facts about myself</h2>
+        <li>the homepage </li>
+        <li>the blogpage </li>
+        <li>the guestpage (not functioning)</li>
+        <li>the other page</li>    
+        <li>self destruct button</li>
+    </div>
+ 
+</div>
+<div style="border: 3px solid #864391;" >
+<!-- Skills & weaknesses: Contains the skills & weaknesses on left with whitle goy and the updates on the right -->
+<div class="div-left" >
+    <h2>Things I wanna add 02-09-2026</h2>
+    <li><B>ABOUT: </B>Actually introducing myself :0 </li>
+    <li><b>SCROLL:</b> Make the About and Silly's sections scrollable</li>
+    <li><b>LAYOUT:</b> Have different sections more dispersed over the screen instead of all under eachother</li>
+    <li><b>NAVIGATION:</b> Add appearing Tabs for interests, rants, and project pages under the blog link</li>
+    <li><b>SPICE:</b> Make one or 4 little whitle goy gifs and program it to follow the mouse around (still finding out what may work best)</li>
+    <li><B>PROCASTINATION: </B>I added my dog, because <I>LOOK AT HIM GODDAMN IT!!! THATS A GOOD BOY!!!</I> </li>
 
-    <h2>Scope goals fase 2</h2>
-    <li><B>HOME: </B>Yassify the home page (this page yay) </li>
-    <li><b>BLOG:</b> Make the blog page (the rant page only one working for now)</li>
-    <li><b>GUEST:</b> list it under construction for now</li>
-    <li><b>Other:</b> list it under construction for now</li>
-    <li><b>SPICE:</b> make the navigation easier</li>
     <br>
-    <p id="whitlegoy_txt">Please be patient, I'm just a whitle goy.</p>
-    <img id="whitlegoy_img" src="assets/images/whitle_goy.png" class="responsive--" height="100px">
+     <p id="whitlegoy_txt">Please be patient, I'm just a whitle goy.</p>
+    <img id="whitlegoy_img" src="assets/images/whitle_goy.png" class="responsive--" height="100px" style="position:absolute;">
+    <img id="pet_img" src="assets/images/petting.gif" style="left: -3%; top: -40px; position: relative;">
     <br>
 
     <button onclick="explode(), pipe()" style="font-size: 25px; border-radius: 5px"><b>DO NOT
             PRESS</b></button>
+</div>
+<div class="div-right", style="border: 4px solid #864391; border-radius: 10px;">  
+    <h2>Updates</h2>
+    <p> Allas, this website has not lauched yet. 
+        <br> In development since 11-7-2026 
+        <br> added basic features: </p>
+        <li>the homepage </li>
+        <li>the blogpage </li>
+        <li>the guestpage (not functioning)</li>
+        <li>the other page</li>    
+        <li>self destruct button</li>
+        <br>
+        
+        <p>Further developed on 02-09-2026
+            <br>planned features:
+        </p>
+        <li>better navigation bar </li>
+        <li>seperate scrollable partitions for about & updates </li>
+        <li>actual info about myself</li>
+        <li>another whitle goy follows you around</li>    
+        <li>whitle goy can press the button after x time</li>        
+        <br> 
+   
+    </p>
+    </div> 
+</div>
+   
 
     <script>
         function explode() {
@@ -116,6 +187,7 @@
 
             document.getElementById("whitlegoy_txt").innerHTML = "AAaaaAAaAAAAAaaaaAAaaauuuughghhghhg"
             document.getElementById("whitlegoy_img").src = "assets/images/explosion.gif"
+            document.getElementById("pet_img").src = "assets/images/explosion.gif"
 
 
             document.getElementById("glitter_left").src = "assets/images/sus.gif"
@@ -128,6 +200,20 @@
         function pipe() {
             const audio = new Audio('assets/sounds/metal_pipe.mp3');
             audio.play();
+        }
+    </script>
+
+    <script>
+        function zoom() {
+            document.getElementById("dog_img").src = "assets/images/lex_zoom.jpg"
+            const audio = new Audio('assets/sounds/megaborkvania.mp3');
+            audio.play();
+        }
+    </script>
+
+    <script>
+        function zoomout() {
+            document.getElementById("dog_img").src = "assets/images/lex.jpg"
         }
     </script>
 

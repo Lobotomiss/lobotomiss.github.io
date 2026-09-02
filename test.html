@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+  width: 50%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 2s ease;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<h2>Fade in Overlay</h2>
+
+<div class="container">
+  <img src="assets/images/lex.jpg" alt="Avatar" style="width: 200px;">
+  <div class="overlay" style="width: 200px;">
+    <img src="assets/images/lex_zoom.jpg">
+
+
+
+
