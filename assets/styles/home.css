@@ -10,6 +10,7 @@ p {
 Body {
   text-align: center;
   background-color: rgb(126, 159, 199);
+  cursor: default;
 }
 
 h2 {
@@ -22,9 +23,14 @@ h3 {
 }
 
 li {
-  text-align:left 20px;
+  text-align: left 20px;
   color: rgb(79, 13, 90);
   list-style-position: inside;
+}
+
+.scroll {
+  scrollbar-color: purple pink;
+  scrollbar-width: thick;
 }
 
 button {
