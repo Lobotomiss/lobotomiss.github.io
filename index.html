@@ -12,13 +12,10 @@
         Body {
             text-align: center;
             background-color: rgb(126, 159, 199);
-            background: #E0E2FF center/cover url("assets/images/polkadot_bg.png") repeat
+            background: #E0E2FF center/cover url("assets/images/polkadot_bg.png") repeat;
+            /* cursor: url('assets/cursor/snipe.cur'), auto; bleek aan de .ani file type te liggen. neemt alleen gifs, pngs en cur. */
+            
         }
-
-
-.cursor_snipe {
-    cursor: url("assets/images/frog.png"), default;
-}
 
         button {
             width: 150px;
@@ -66,14 +63,13 @@
   width: 40%; /* Adjust width as needed */
   border-radius: 10px
 }
-
     </style>
             
     <div class="sidebar-left" , height="1000px">
 
 
         <button onclick="pipe()"><img id="glitter_left" src="assets/images/glitter.gif" width="200px"
-                style="  position: fixed; top: 50px; left:0px;">
+                style="  position: fixed; top: 50px; left:0px; cursor: url('assets/cursor/snipe.cur'), auto;">
 
         </button>
 
@@ -100,7 +96,8 @@
     </div>
 </header>
 <img src="assets/images/look_dog.gif">
-<img id="dog_img" src="assets/images/lex.jpg" style="width: 200px;" onmouseover="zoom()" onmouseleave="zoomout()">
+
+<img id="dog_img" src="assets/images/lex.jpg" style="width: 200px; cursor: url('assets/cursor/snipe.cur'), auto;" onmouseover="zoom()" onmouseleave="zoomout()">
 
 
 
@@ -109,7 +106,7 @@
 <body>
     <h1 style="background-color: rgb(156, 99, 197)"> <b> Homepage </b> </h1>
 <!-- About: Contains the about section and the random facts on left and right in srollable fasion -->
-<div class="scroll" style="overflow: scroll; align-items: center; height: 500px;">
+<div class="scroll" style="overflow-y: scroll; align-items: center; height: 500px;">
 <div class="div-left" >
 
     <h2>About myself</h2>
@@ -159,14 +156,7 @@
 
     </div>
  <div style="float: left; width: 100%;">
-    <h2>Strenghts & Weaknesses</h2>
-    <img src="assets/images/explosion.gif">
- </div>
-</div>
-<div style="border: 3px solid #864391;" >
-<!-- Skills & weaknesses: Contains the skills & weaknesses on left with whitle goy and the updates on the right -->
-<div class="div-left" >
-    <h2>Things I wanna add 02-09-2026</h2>
+        <h2>Things I wanna add</h2>
     <li><B>ABOUT: </B>Actually introducing myself :0 </li>
     <li><b>SCROLL:</b> Make the About and Silly's sections scrollable</li>
     <li><b>LAYOUT:</b> Have different sections more dispersed over the screen instead of all under eachother</li>
@@ -174,13 +164,56 @@
     <li><b>SPICE:</b> Make one or 4 little whitle goy gifs and program it to follow the mouse around (still finding out what may work best)</li>
     <li><B>PROCASTINATION: </B>I added my dog, because <I>LOOK AT HIM GODDAMN IT!!! THATS A GOOD BOY!!!</I> </li>
 
+    
+
+ </div>
+</div>
+<div style="border: 3px solid #864391;" >
+<!-- Skills & weaknesses: Contains the skills & weaknesses on left with whitle goy and the updates on the right -->
+<div class="div-left" >
+    <h2>Strenghts & Weaknesses</h2>
+
+<div class="bar"> 
+<div class="color" style="width: 80%; background-color: rgb(43, 5, 94);"><p class="text">Strength (of character)</p></div>
+</div>
+
+<div class="bar"> 
+<div class="color" style="width: 30%; background-color: rgb(54, 7, 116);"><p class="text">Strength (muscle)</p></div>
+</div>
+
+<div class="bar"> 
+<div class="color" style="width: 50%; background-color: rgb(63, 7, 116);"><p class="text">Dexterity (sleight of hand)</p></div>
+</div>
+
+<div class="bar"> 
+<div class="color" style="width: 90%; background-color: rgb(76, 7, 116);"><p class="text">Constitution (alcohol tolerance)</p></div>
+</div>
+
+<div class="bar"> 
+<div class="color" style="width: 35%; background-color: rgb(76, 7, 116);"><p class="text">Constitution (mental battery)</p></div>
+</div>
+
+<div class="bar"> 
+<div class="color" style="width: 65%; background-color: rgb(94, 7, 116);"><p class="text">Intelligence (learn speed)</p></div>
+</div>
+
+<div class="bar"> 
+<div class="color" style="width: 75%; background-color: rgb(116, 7, 111);"><p class="text">Wisdom (life experience)</p></div>
+</div>
+
+<div class="bar"> 
+<div class="color" style="width: 60%; background-color: rgb(192, 25, 117);"><p class="text">Charisma (people skills)</p></div>
+</div>
+
+
+
     <br>
      <p id="whitlegoy_txt">Please be patient, I'm just a whitle goy.</p>
     <img id="whitlegoy_img" src="assets/images/whitle_goy.png" class="responsive--" height="100px" style="position:absolute;">
     <img id="pet_img" src="assets/images/petting.gif" style="left: -3%; top: -40px; position: relative;">
     <br>
 
-    <button onclick="explode(), pipe()" style="font-size: 25px; border-radius: 5px"><b>DO NOT
+    <button onclick="explode(), pipe()" style="cursor: url('assets/cursor/snipe.cur'), auto; font-size: 25px; border-radius: 5px"><b>DO NOT
             PRESS</b></button>
 </div>
 <div class="div-right", style="border: 4px solid #864391; border-radius: 10px;">  
@@ -252,7 +285,7 @@
 <div class="sidebar-right">
 
     <button onclick="pipe()"><img id="glitter_right" src="assets/images/glitter.gif" width="200px"
-            style="  position: fixed; top: 50px; right:0px;">
+            style="  position: fixed; top: 50px; right:0px; cursor: url('assets/cursor/snipe.cur'), auto;">
 
     </button>
 

@@ -79,3 +79,24 @@ ul {
   width: 100%;
   list-style-position: inside;
 }
+
+.bar{
+    width: 100%; height: 25px;
+    background-color: rgb(137, 106, 151);
+}
+.color{
+    height: 25px;
+    
+    position: relative;
+    top: -0px
+}
+    .text{
+    width: 100%; height: 25px;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    font-weight: bold;
+    position: relative;
+    top: -0px;
+    text-align: left;
+    padding-left: 10px;
+}
