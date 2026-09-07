@@ -1,3 +1,8 @@
+:root {
+  /*Kleuren en lettertype variabelen*/
+  --Achtergrondkleur: rgba(174, 129, 196, 1);
+}
+
 h1 {
   color: rgb(79, 13, 90);
   background-color: rgb(156, 99, 197);
@@ -28,13 +33,37 @@ li {
   list-style-position: inside;
 }
 
+.bar {
+  width: 100%;
+  height: 25px;
+  background-color: rgb(137, 106, 151);
+}
+.color {
+  height: 25px;
+  position: relative;
+}
+.text {
+  width: 100%;
+  height: 25px;
+  color: rgb(255, 255, 255);
+  font-size: medium;
+  font-weight: bold;
+  position: relative;
+  text-align: left;
+  padding-left: 10px;
+}
+
 .scroll {
   scrollbar-color: purple pink;
   scrollbar-width: thick;
 }
 
-button {
+.button {
   background-color: rgb(156, 99, 197);
+  font-size: 25px;
+  border-radius: 5px;
+  cursor: url('../cursor/snipe.cur'), auto;
+  width: 150px;
   font-size: 25px;
   border-radius: 5px;
 }
@@ -47,7 +76,7 @@ button {
 .main-content {
   float: left;
   width: 75%; /* Adjust width as needed */
-  background-color: rgb(174, 129, 196);
+  background-color: var(--Achtergrondkleur);
   border-radius: 10px;
 }
 
@@ -55,9 +84,85 @@ button {
   float: right;
   width: 11.5%; /* Adjust width as needed */
 }
+.topbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(79, 13, 90);
+  display: flex;
+  justify-content: center;
 
-/*styling for navigationbar*/
-ul {
+}
+
+.topbar ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+      cursor: url('../cursor/snipe.cur'), auto;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.topbar ul li button {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  background-color:rgb(79, 13, 90);
+  font-size: 20px;
+  border-radius: 0px;
+  border-color: rgba(174, 129, 196, 0);
+  cursor: url('../cursor/snipe.cur'), auto;
+  font-family: "Times New Roman", Times, serif;
+
+}
+
+.topbar ul {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  list-style-position: inside;
+}
+.topbar ul div{
+  position: relative;
+  top: 0px;
+  left: 0;
+  width: 100%;
+}
+
+
+/*navbar collapsable yoinked from online */
+.collapsible {
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(98, 27, 110);
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: rgb(127, 69, 138);
+}
+
+
+/* oude navbar styling
+styling for navigationbar
+.topbar {
+}
+
+.topbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -66,37 +171,46 @@ ul {
   justify-content: center;
 }
 
-ul li a {
+.topbar ul li a {
   display: block;
   color: white;
   padding: 14px 16px;
   text-decoration: none;
 }
-ul {
+.topbar ul {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   list-style-position: inside;
 }
+collapsable navbar, problem 1: collapse does not start at body but .main-content
+.collapse {
+    position: fixed;
+      top: 0;
+  left: 0;
+    justify-content: center;
+      width: 100%;
+}
 
-.bar{
-    width: 100%; height: 25px;
-    background-color: rgb(137, 106, 151);
+.topbar .collapse ul {
+  background-color: rgb(79, 13, 90);
+  display: block;
+
+
 }
-.color{
-    height: 25px;
-    
-    position: relative;
-    top: -0px
+
+.topbar .collapse ul li a {
+  color: white;
+  text-decoration: none;
+    width: 93%;
+    justify-content: center;
+
 }
-    .text{
-    width: 100%; height: 25px;
-    color: rgb(255, 255, 255);
-    font-size: large;
-    font-weight: bold;
-    position: relative;
-    top: -0px;
-    text-align: left;
-    padding-left: 10px;
+
+.topbar .collapse ul {
+  position: relative;
+  top: 0px;
+  width: 100%;
 }
+*/

@@ -62,12 +62,20 @@
 
         #lil_guy{
         position:absolute;
-        rotate: 0deg;
+        rotate: 90deg;
         }
+
+#p1 {
+  border: solid blue 2px;
+}
+
+#butt {
+  border: solid rgb(0, 247, 255) 2px;
+}
 
     </style>
 
-<body onmousemove="walk(); rotate(); walk_ani()">
+<body onmouseover="walk(); rotate(); walk_ani()">
 
     <div class="sidebar-left" , height="1000px">
 
@@ -119,100 +127,113 @@
     </div>
 </header>
 
-<img src="assets/images/lil_guy_cry.png">
+<button onclick="walk_ani()">test</button>
+
+<img src="assets/images/lil_guy_cry.png"">
 <img src="assets/images/lil_guy_stand.png">
 <img src="assets/images/lil_guy_walk.gif">
 
 <img id="lil_guy" src="assets/images/lil_guy_stand.png" >
+
+<p>coordinate: <span></span></p>
+
 <br>
 
 
 <script>    
-
-function walk_ani() {document.getElementById("lil_guy").src = "assets/images/lil_guy_walk.gif"}
-
-
-let timer;
-const delay = 1000; // .3 second delay
-const longDelay = 3000; // 3 second delay
-
-document.addEventListener("mousemove", () => {
-    clearTimeout(timer); // Clear the previous timer
-    timer = setTimeout(() => {
-        console.log("Mouse is stationary");
-        document.getElementById("lil_guy").src ="assets/images/lil_guy_stand.png";
-    }, delay);
-});
-
-document.addEventListener("mousemove", () => {
-    //clearTimeout(timer); // Clear the previous timer
-    timer = setTimeout(() => {
-        console.log("Mouse is stationary long");
-        document.getElementById("lil_guy").src ="assets/images/lil_guy_cry.png";
-    }, longDelay);
-});
-
-
-//making lil guy move niet aanzitten werkt priem!
-function walk() {
-    
-
-
-$(document).mousemove(function(coordinate){
-  const currentX = event.clientX;
-    const currentY = event.clientY;
-
-    $("#lil_guy").stop().animate({left:currentX, top:currentY});
-
-});
-}
-
-//script to rotate lil guy, buggy! oplossing was uiteindelijk de img coordination pakken ipv previous mouse coordinate!!! >:D
-
+//script to rotate lil guy
 function calculateAngle(x1, y1, x2, y2) {
     const radians = Math.atan2(y2 - y1, x2 - x1);
-    const degrees = (radians * 180 / Math.PI) -90;
+    const degrees = radians * 180 / Math.PI;
     return degrees;
 }
 
-
-
-
 const lil_guy = document.getElementById("lil_guy");
+const currentX = event.clientX;
+const currentY = event.clientY;
+const angle = calculateAngle(previousX, previousY, currentX, currentY) + "deg";
 
+setInterval(rotate, 0)
 
 function rotate() {
-
 document.addEventListener("mousemove", (event) => {
     //lil_guy.style.rotate = "30deg";
-    const currentX = event.clientX;
-    const currentY = event.clientY;
-
-    const img = document.getElementById('lil_guy');
-    const imgRect = img.getBoundingClientRect();
-    const previousX = imgRect.left + window.screenX;
-    const previousY = imgRect.top + window.screenY;
-
-    //const previousX = lil_guy.clientX;
-    //const previousY = lil_guy.clientY;
-
-    const angle = calculateAngle(previousX, previousY, currentX, currentY) + "deg";
-
     lil_guy.style.rotate = angle;
-
-    console.log(angle)
-    // Update previous coordinates
-
-
     });
-
     }
-
-
-
 
 </script>
 
+
+
+<script>
+
+function walk_ani() {     document.getElementById("lil_guy").src = "assets/images/lil_guy_walk.gif"   }
+
+function walk() {
+
+$(document).mousemove(function(coordinate){
+    let mouseData = coordinate
+    const currentX = event.clientX;
+    const currentY = event.clientY;
+    const angle = calculateAngle(previousX, previousY, currentX, currentY);
+
+    
+
+    $("#lil_guy").stop().animate({left:currentX, top:currentY});
+     
+});
+}
+</script>
+
+ 
+<script>
+
+$(document).ready(function(){
+    
+  $(document).mousemove(function(event){
+    $("span").text(event.pageX + ", " + event.pageY);
+  });
+});
+
+//messing around
+//$(document).mouseleave(function(){
+//            const audio = new Audio('assets/sounds/metal_pipe.mp3');
+//            audio.play();
+//});
+
+//ik wil het slomer laten lopen
+
+//setTimeout(walk, 0);
+
+//e.pageX wordt gedefineerd in coordinate waarin e de mousemove functie betreft! 
+//zonder stop() blijft het haken, stop() termineerd het programma. Dus stop refreshed het als het ware.
+
+
+
+function calculateAngle(x1, y1, x2, y2) {
+    const radians = Math.atan2(y2 - y1, x2 - x1);
+    const degrees = radians * 180 / Math.PI;
+    return degrees;
+}
+
+    let previousX = 0;
+    let previousY = 0;
+
+document.addEventListener("mousemove", (event) => {
+
+    const currentX = event.clientX;
+    const currentY = event.clientY;
+    const angle = calculateAngle(previousX, previousY, currentX, currentY);
+    
+    console.log(angle); 
+
+
+
+
+});
+
+</script> 
 
 </body>
 </div>

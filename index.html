@@ -1,26 +1,20 @@
 <!-- Dit is de main page !-->
 <!DOCTYPE html>
-<html lang="en"1>
+<html lang="en" 1>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Territory of Lobotomiss</title> <!-- Page title (appears in browser tab) -->
     <link rel="stylesheet" href="assets/styles/home.css">
+    <script src="assets/scripts/scripts.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="icon" href="frog.ico">
     <style>
         Body {
             text-align: center;
             background-color: rgb(126, 159, 199);
-            background: #E0E2FF center/cover url("assets/images/polkadot_bg.png") repeat;
-            /* cursor: url('assets/cursor/snipe.cur'), auto; bleek aan de .ani file type te liggen. neemt alleen gifs, pngs en cur. */
-            
-        }
-
-        button {
-            width: 150px;
-            font-size: 25px;
-            border-radius: 5px;
+            background: center/cover url("assets/images/polkadot_bg.png") repeat;
         }
 
         .sidebar-left {
@@ -46,25 +40,33 @@
             padding-top: 1px;
             margin-top: -1px;
         }
+
         .responsive {
             width: 100%;
             height: 100%;
         }
 
-/* test voor toevoegen van formatting binnen het about me block */
-.div-left {
-  float: left;
-  width: 55%; /* Adjust width as needed */
-  border-radius: 10px;
-}
+        /* test voor toevoegen van formatting binnen het about me block */
+        .div-left {
+            float: left;
+            width: 55%;
+            /* Adjust width as needed */
+            border-radius: 10px;
+        }
 
-.div-right {
-  float: right;
-  width: 40%; /* Adjust width as needed */
-  border-radius: 10px
-}
+        .div-right {
+            float: right;
+            width: 40%;
+            /* Adjust width as needed */
+            border-radius: 10px
+        }
+
+        #lil_guy{
+        position:absolute;
+        rotate: 0deg;
+        }
     </style>
-            
+
     <div class="sidebar-left" , height="1000px">
 
 
@@ -75,220 +77,333 @@
 
     </div>
 
+    <div class="sidebar-right">
+
+        <button onclick="pipe()"><img id="glitter_right" src="assets/images/glitter.gif" width="200px"
+                style="  position: fixed; top: 50px; right:0px; cursor: url('assets/cursor/snipe.cur'), auto;">
+
+        </button>
+
+    </div>
+
     <div class="main-content">
 </head>
 <!-- Header: Contains logo and navigation -->
+
 <header>
-    <div>
+    <div class="topbar">
         <br>
         <h1 onclick="pipe()">Territory of Lobotomiss</h1>
 
         <nav>
-            <table style="width: 100%; border-collapse: collapse;" cellpadding="3">
-                <ul align="center" ;>
-                    <li><a href="index.html" class="active">HOME</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="guest.html">GUEST</a></li>
-                    <li><a href="other.html">OTHER</a></li>
-                </ul>
-            </table>
-        </nav>
+            <table style="width: 100%;">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+<!-- Collapsable is wonky, het script zelf heeft een eventlistner voor click dus als ik onclick gebruik doet die het op dubbelklik. bij onmouseover pakt die het om en om... -->
+                    <li><button class="collapsible" onmouseleave="collapse()" onmouseenter="collapse()">BLOG</button>
+                        <div class="content">
+                            <a href="blog.html">Blog Board</a>
+                            <a href="rants.html">Rants</a>
+                            <a href="projects.html">Projects</a>
+                            <a href="interests.html">Interests</a>
+                    </li>
+    </div>
+
+    <li><a href="guest.html">GUEST</a></li>
+    <li><a href="other.html">OTHER</a></li>
+    </ul>
+    </table>
+    </nav>
     </div>
 </header>
+
+<img id="lil_guy" src="assets/images/lil_guy_stand.png" >
+
+
 <img src="assets/images/look_dog.gif">
 
-<img id="dog_img" src="assets/images/lex.jpg" style="width: 200px; cursor: url('assets/cursor/snipe.cur'), auto;" onmouseover="zoom()" onmouseleave="zoomout()">
+<img id="dog_img" src="assets/images/lex.jpg" style="width: 200px; cursor: url('assets/cursor/snipe.cur'), auto;"
+    onmouseover="zoom()" onmouseleave="zoomout()">
 
 
 
 </head>
 
-<body>
-    <h1 style="background-color: rgb(156, 99, 197)"> <b> Homepage </b> </h1>
-<!-- About: Contains the about section and the random facts on left and right in srollable fasion -->
-<div class="scroll" style="overflow-y: scroll; align-items: center; height: 500px;">
-<div class="div-left" >
+<body onmousemove="walk(); rotate(); walk_ani()">
+    <h1 style="background-color: rgb(156, 99, 197)"> <b> About myself </b> </h1>
+    <!-- About: Contains the about section and the random facts on left and right in srollable fasion -->
+    <div class="scroll" style="overflow-y: scroll; align-items: center; height: 500px;">
+        <div class="div-left">
 
-    <h2>About myself</h2>
+            <h3>Why make this website?</h3>
+            <p> I am but a <i>fool</i>, a <i>stupid idiot</i>, trying to become a <b> smart</b> <i>idiot!</i> This
+                website will
+                try to document that journey.
+                <br>
+                I will also use it to spit my interests and rants at you if you are willing to read it :) <br>
 
-    <h3>Why make this website?</h3>
-    <p> I am but a <i>fool</i>, a <i>stupid idiot</i>, trying to become a <b> smart</b> <i>idiot!</i> This website will
-        try to document that journey.
-        <br>
-        I will also use it to spit my interests and rants at you if you are willing to read it :) <br>
-    
-    <h3>Who even am I?</h3>
-    <p>A great question that humanity has pondered over the ages. Cogito ergo sum as they say! With that I will say that I am yet another soul (like you dear reader) with their own internal ego and self perceptions, and as such i think it is most important you make your own opinion about me (It's your human right, so you better use it!). Now to cut the boring monologuing short. I am Lobotomiss/Pineapple (I am currently deciding to not attach any names since i put this stuff on the interwebs), I am 24F, and my hobby's tend to sit on the geeky sides of things. Think things like D&D and video/board games. I have also taken up boulderen (climbing but fancy) and shooting, and I am also trying out calisthenics to hopefully get some muscle on my noodly arms. I also may yap a lot but don't be deceived, at the end of the day I do think people can be a bit scary, so please don't be afraid to talk to me because I am probably just as scared as you, if not <i>more</i>  scared. </p>
-    
-    <h3>Study History</h3>
-    <p><B>It all started when I was born!</B> Just kidding, i'm not going that far back. However, after finishing my admidately shitty middle school, I studied Forensic Lab Research on the van Hall Larenstein where I have learned Tactical Forensics like different crimescene analysis branches, Microbiological Forensics like basic petridish analysis and DNA research, Analytical chemistry and lastly a little bit about Dutch law, all both practical an theory. I have focussed myself mostly on analytical chemistry with an extra interrest in Toxicology, Coding and automation (although the coding and automation went mostly on the background during my internships). After working at Eurofins Heerenveen for a while I had some medical issues caused by an old injury and the standard posture during lab work and I decided to follow my interests in IT instead and that is why I now study at the HU. I hope to learn more about servers, coding/softwaredevelopment, cybersecurity and a touch of AI model training.
-    <br> 
-    So If you are working on a project to do with chemistry and biology/microbiology/DNA then don't be shy to ask me anything if you think I might be of help. (˶ᵔ ᵕ ᵔ˶) </p>
-    </p>
+            <h3>Who even am I?</h3>
+            <p>A great question that humanity has pondered over the ages. Cogito ergo sum as they say! With that I will
+                say that I am yet another soul (like you dear reader) with their own internal ego and self perceptions,
+                and as such i think it is most important you make your own opinion about me (It's your human right, so
+                you better use it!). Now to cut the boring monologuing short. I am Lobotomiss/Pineapple (I am currently
+                deciding to not attach any names since i put this stuff on the interwebs), I am 24F, and my hobby's tend
+                to sit on the geeky sides of things. Think things like D&D and video/board games. I have also taken up
+                boulderen (climbing but fancy) and shooting, and I am also trying out calisthenics to hopefully get some
+                muscle on my noodly arms. I also may yap a lot but don't be deceived, at the end of the day I do think
+                people can be a bit scary, so please don't be afraid to talk to me because I am probably just as scared
+                as you, if not <i>more</i> scared. </p>
+
+            <h3>Study History</h3>
+            <p><B>It all started when I was born!</B> Just kidding, i'm not going that far back. However, after
+                finishing my admidately shitty middle school, I studied Forensic Lab Research on the van Hall Larenstein
+                where I have learned Tactical Forensics like different crimescene analysis branches, Microbiological
+                Forensics like basic petridish analysis and DNA research, Analytical chemistry and lastly a little bit
+                about Dutch law, all both practical an theory. I have focussed myself mostly on analytical chemistry
+                with an extra interrest in Toxicology, Coding and automation (although the coding and automation went
+                mostly on the background during my internships). After working at Eurofins Heerenveen for a while I had
+                some medical issues caused by an old injury and the standard posture during lab work and I decided to
+                follow my interests in IT instead and that is why I now study at the HU. I hope to learn more about
+                servers, coding/softwaredevelopment, cybersecurity and a touch of AI model training.
+                <br>
+                For classmates: If you are working on a project to do with chemistry and biology/microbiology/DNA then don't be shy
+                to ask me anything if you think I might be of help. (˶ᵔ ᵕ ᵔ˶)
+            </p>
+            </p>
+        </div>
+        <div class="div-right">
+            <h2>Silly facts about myself</h2>
+            <li style="text-align: left;">I like baking, mostly to eat yummy stuff :3 </li>
+            <li style="text-align: left;">I have a bunch of lovely friends from all over the place! <br> (Though with
+                the unfortunate addition of having to drive a lot.) </li>
+            <li style="text-align: left;">I love a good wiskey, so if ya wanna make me happy, that would be it. </li>
+            <li style="text-align: left;">I can lick the tip of my nose. </li>
+            <li style="text-align: left;">I love leather. </li>
+            <li style="text-align: left;">Ik weet waar je bed slaapt. ( • ̀ω•́ ) ʰᵉʰ⋅ /̵͇̿̿/'̿'̿ ̿ ̿̿ ̿̿ ̿̿</li>
+
+            <h2>Game genres I like</h2>
+            <li style="text-align: left;">Roguelikes </li>
+            <li style="text-align: left;">RPGs </li>
+            <li style="text-align: left;">MMOs </li>
+            <li style="text-align: left;">Shooters </li>
+            <li style="text-align: left;">Souls likes </li>
+            <li style="text-align: left;">Card games </li>
+            <li style="text-align: left;">Platformers</li>
+            <li style="text-align: left;">Friendslop</li>
+            <li style="text-align: left;">Indie games</li>
+            <li style="text-align: left;">Fighting games</li>
+
+            <h2>Game genres I suck at and/or dislike</h2>
+            <li style="text-align: left;">Strategy-games </li>
+            <li style="text-align: left;">LOL/DOTA </li>
+            <li style="text-align: left;">Triple-A games</li>
+            </li>
+            <li style="text-align: left;">Simulation games </li>
+            <li style="text-align: left;">Sandbox </li>
+
+        </div>
+        <div style="float: left; width: 100%;">
+            <h2>Things I wanna add</h2>
+            <li><b>SPICE:</b> Make one or 4 little whitle goy gifs and program it to follow the mouse around (still
+                finding out what may work best)</li>
+            <li><B>PROCASTINATION: </B>I added my dog, because <I>LOOK AT HIM GODDAMN IT!!! THATS A GOOD BOY!!!</I>
+            </li>
+            <br>
+
+
+
+        </div>
     </div>
-    <div class="div-right">
-        <h2>Silly facts about myself</h2>
-        <li style="text-align: left;">I like baking, mostly to eat yummy stuff :3 </li>
-        <li style="text-align: left;">I have a bunch of lovely friends from all over the place! <br>  (Though with the unfortunate addition of having to drive a lot.) </li>
-        <li style="text-align: left;">I love a good wiskey, so if ya wanna make me happy, that would be it. </li>
-        <li style="text-align: left;">I can lick the tip of my nose. </li>    
-        <li style="text-align: left;">I love leather. </li>
-        <li style="text-align: left;">Ik weet waar je bed slaapt. ( • ̀ω•́ ) ʰᵉʰ⋅ /̵͇̿̿/'̿'̿ ̿ ̿̿ ̿̿ ̿̿</li>
+    <div style="border: 3px solid #864391;">
+        <!-- Skills & weaknesses: Contains the skills & weaknesses on left with whitle goy and the updates on the right -->
+        <div class="div-left">
+            <h2>Strengths & Weaknesses</h2>
 
-        <h2>Game genres I like</h2>
-        <li style="text-align: left;">Roguelikes </li>
-        <li style="text-align: left;">RPGs </li>
-        <li style="text-align: left;">MMOs </li>
-        <li style="text-align: left;">Shooters </li> 
-        <li style="text-align: left;">Souls likes </li>   
-        <li style="text-align: left;">Card games </li>
-        <li style="text-align: left;">Platformers</li> 
-        <li style="text-align: left;">Friendslop</li>
-        <li style="text-align: left;">Indie games</li>
-        <li style="text-align: left;">Fighting games</li>
+            <div class="bar">
+                <div class="color" style="width: 80%; background-color: rgb(43, 5, 94);">
+                    <p class="text">Perseverance [STR]</p>
+                </div>
+            </div>
 
-        <h2>Game genres I <s>suck at</s> dislike</h2>
-        <li style="text-align: left;">Strategy-games </li>
-        <li style="text-align: left;">LOL/DOTA </li>
-        <li style="text-align: left;">Triple-A games</li> </li>
-        <li style="text-align: left;">Simulation games </li>    
-        <li style="text-align: left;">Sandbox </li>
+            <div class="bar">
+                <div class="color" style="width: 25%; background-color: rgb(54, 7, 116);">
+                    <p class="text">Muscle [STR]</p>
+                </div>
+            </div>
 
+            <div class="bar">
+                <div class="color" style="width: 50%; background-color: rgb(63, 7, 116);">
+                    <p class="text">Typing speed [DEX]</p>
+                </div>
+            </div>
+
+            <div class="bar">
+                <div class="color" style="width: 90%; background-color: rgb(76, 7, 116);">
+                    <p class="text">Alcohol tolerance [CON]</p>
+                </div>
+            </div>
+
+            <div class="bar">
+                <div class="color" style="width: 35%; background-color: rgb(76, 7, 116);">
+                    <p class="text">Mental battery [CON]</p>
+                </div>
+            </div>
+
+            <div class="bar">
+                <div class="color" style="width: 65%; background-color: rgb(94, 7, 116);">
+                    <p class="text">Learning speed [INT]</p>
+                </div>
+            </div>
+
+            <div class="bar">
+                <div class="color" style="width: 70%; background-color: rgb(116, 7, 111);">
+                    <p class="text">Experience [WIS]</p>
+                </div>
+            </div>
+
+            <div class="bar">
+                <div class="color" style="width: 60%; background-color: rgb(160, 21, 130);">
+                    <p class="text">People skills [CHA]</p>
+                </div>
+
+            <div class="bar">
+                <div class="color" style="width: 30%; background-color: rgb(192, 25, 108);">
+                    <p class="text">Social battery [CHA]</p>
+                </div>
+            </div>
+            </div>
+            <br>
+                        <br>
+            <p id="whitlegoy_txt">Please be patient, I'm just a whitle goy.</p><br>
+            <img id="whitlegoy_img" src="assets/images/whitle_goy.png" class="responsive--" height="100px"
+                style="position:absolute;">
+            <img id="pet_img" src="assets/images/petting.gif" style="left: -3%; top: -40px; position: relative;">
+            <br>
+
+            <button onmouseenter="cry()" onmouseleave="dry()" onclick="explode(), pipe()" style=" font-size: 25px; border-radius: 5px" class="button"><b>DO NOT
+                    PRESS</b></button>
+        </div>
+        <div class="div-right" , style="border: 4px solid #864391; border-radius: 10px;">
+            <h2>Updates</h2>
+            <p> Allas, this website has not lauched yet.
+                <br> In development since 11-7-2026
+                <br> added basic features:
+            </p>
+            <li>the homepage </li>
+            <li>the blogpage </li>
+            <li>the guestpage (not functioning)</li>
+            <li>the other page</li>
+            <li>self destruct button</li>
+            <br>
+
+            <p>Further developed on 02-09-2026
+                <br>planned features:
+            </p>
+            <li>better navigation bar </li>
+            <li>seperate scrollable partitions for about & updates </li>
+            <li>actual info about myself</li>
+            <li>another whitle goy follows you around</li>
+            <li>whitle goy can press the button after x time</li>
+            <br>
+
+            </p>
+        </div>
     </div>
- <div style="float: left; width: 100%;">
-        <h2>Things I wanna add</h2>
-    <li><B>ABOUT: </B>Actually introducing myself :0 </li>
-    <li><b>SCROLL:</b> Make the About and Silly's sections scrollable</li>
-    <li><b>LAYOUT:</b> Have different sections more dispersed over the screen instead of all under eachother</li>
-    <li><b>NAVIGATION:</b> Add appearing Tabs for interests, rants, and project pages under the blog link</li>
-    <li><b>SPICE:</b> Make one or 4 little whitle goy gifs and program it to follow the mouse around (still finding out what may work best)</li>
-    <li><B>PROCASTINATION: </B>I added my dog, because <I>LOOK AT HIM GODDAMN IT!!! THATS A GOOD BOY!!!</I> </li>
-
     
-
- </div>
-</div>
-<div style="border: 3px solid #864391;" >
-<!-- Skills & weaknesses: Contains the skills & weaknesses on left with whitle goy and the updates on the right -->
-<div class="div-left" >
-    <h2>Strenghts & Weaknesses</h2>
-
-<div class="bar"> 
-<div class="color" style="width: 80%; background-color: rgb(43, 5, 94);"><p class="text">Strength (of character)</p></div>
-</div>
-
-<div class="bar"> 
-<div class="color" style="width: 30%; background-color: rgb(54, 7, 116);"><p class="text">Strength (muscle)</p></div>
-</div>
-
-<div class="bar"> 
-<div class="color" style="width: 50%; background-color: rgb(63, 7, 116);"><p class="text">Dexterity (sleight of hand)</p></div>
-</div>
-
-<div class="bar"> 
-<div class="color" style="width: 90%; background-color: rgb(76, 7, 116);"><p class="text">Constitution (alcohol tolerance)</p></div>
-</div>
-
-<div class="bar"> 
-<div class="color" style="width: 35%; background-color: rgb(76, 7, 116);"><p class="text">Constitution (mental battery)</p></div>
-</div>
-
-<div class="bar"> 
-<div class="color" style="width: 65%; background-color: rgb(94, 7, 116);"><p class="text">Intelligence (learn speed)</p></div>
-</div>
-
-<div class="bar"> 
-<div class="color" style="width: 75%; background-color: rgb(116, 7, 111);"><p class="text">Wisdom (life experience)</p></div>
-</div>
-
-<div class="bar"> 
-<div class="color" style="width: 60%; background-color: rgb(192, 25, 117);"><p class="text">Charisma (people skills)</p></div>
-</div>
-
-
-
-    <br>
-     <p id="whitlegoy_txt">Please be patient, I'm just a whitle goy.</p>
-    <img id="whitlegoy_img" src="assets/images/whitle_goy.png" class="responsive--" height="100px" style="position:absolute;">
-    <img id="pet_img" src="assets/images/petting.gif" style="left: -3%; top: -40px; position: relative;">
-    <br>
-
-    <button onclick="explode(), pipe()" style="cursor: url('assets/cursor/snipe.cur'), auto; font-size: 25px; border-radius: 5px"><b>DO NOT
-            PRESS</b></button>
-</div>
-<div class="div-right", style="border: 4px solid #864391; border-radius: 10px;">  
-    <h2>Updates</h2>
-    <p> Allas, this website has not lauched yet. 
-        <br> In development since 11-7-2026 
-        <br> added basic features: </p>
-        <li>the homepage </li>
-        <li>the blogpage </li>
-        <li>the guestpage (not functioning)</li>
-        <li>the other page</li>    
-        <li>self destruct button</li>
-        <br>
-        
-        <p>Further developed on 02-09-2026
-            <br>planned features:
-        </p>
-        <li>better navigation bar </li>
-        <li>seperate scrollable partitions for about & updates </li>
-        <li>actual info about myself</li>
-        <li>another whitle goy follows you around</li>    
-        <li>whitle goy can press the button after x time</li>        
-        <br> 
-   
-    </p>
-    </div> 
-</div>
-   
-
-    <script>
-        function explode() {
-            const audio = new Audio('assets/sounds/x_files.mp3');
-            audio.play();
-
-            document.getElementById("whitlegoy_txt").innerHTML = "AAaaaAAaAAAAAaaaaAAaaauuuughghhghhg"
-            document.getElementById("whitlegoy_img").src = "assets/images/explosion.gif"
-            document.getElementById("pet_img").src = "assets/images/explosion.gif"
-
-
-            document.getElementById("glitter_left").src = "assets/images/sus.gif"
-            document.getElementById("glitter_right").src = "assets/images/sus_flip.gif"
-
-        }
-    </script>
-
-    <script>
-        function pipe() {
-            const audio = new Audio('assets/sounds/metal_pipe.mp3');
-            audio.play();
-        }
-    </script>
-
-    <script>
-        function zoom() {
-            document.getElementById("dog_img").src = "assets/images/lex_zoom.jpg"
-            const audio = new Audio('assets/sounds/megaborkvania.mp3');
-            audio.play();
-        }
-    </script>
-
-    <script>
-        function zoomout() {
-            document.getElementById("dog_img").src = "assets/images/lex.jpg"
-        }
-    </script>
-
 </body>
 </div>
-<div class="sidebar-right">
 
-    <button onclick="pipe()"><img id="glitter_right" src="assets/images/glitter.gif" width="200px"
-            style="  position: fixed; top: 50px; right:0px; cursor: url('assets/cursor/snipe.cur'), auto;">
+<script>    
 
-    </button>
+function walk_ani() {document.getElementById("lil_guy").src = "assets/images/lil_guy_walk.gif"}
 
-</div>
 
+let timer;
+const delay = 1000; // .3 second delay
+const longDelay = 3000; // 3 second delay
+
+document.addEventListener("mousemove", () => {
+    clearTimeout(timer); // Clear the previous timer
+    timer = setTimeout(() => {
+        console.log("Mouse is stationary");
+        document.getElementById("lil_guy").src ="assets/images/lil_guy_stand.png";
+    }, delay);
+});
+
+document.addEventListener("mousemove", () => {
+    //clearTimeout(timer); // Clear the previous timer
+    timer = setTimeout(() => {
+        console.log("Mouse is stationary long");
+        document.getElementById("lil_guy").src ="assets/images/lil_guy_cry.png";
+    }, longDelay);
+});
+
+
+//making lil guy move niet aanzitten werkt priem!
+function walk() {
+    
+
+
+$(document).mousemove(function(coordinate){
+  const currentX = event.pageX;
+    const currentY = event.pageY;
+
+    $("#lil_guy").stop().animate({left:currentX, top:currentY});
+
+});
+}
+
+//script to rotate lil guy, buggy! oplossing was uiteindelijk de img coordination pakken ipv previous mouse coordinate!!! >:D
+
+function calculateAngle(x1, y1, x2, y2) {
+    const radians = Math.atan2(y2 - y1, x2 - x1);
+    const degrees = (radians * 180 / Math.PI) -90;
+    return degrees;
+}
+
+
+
+
+const lil_guy = document.getElementById("lil_guy");
+
+
+function rotate() {
+
+document.addEventListener("mousemove", (event) => {
+    //lil_guy.style.rotate = "30deg";
+    const currentX = event.clientX;
+    const currentY = event.clientY;
+
+    const img = document.getElementById('lil_guy');
+    const imgRect = img.getBoundingClientRect();
+    const previousX = imgRect.left + window.screenX;
+    const previousY = imgRect.top + window.screenY;
+
+    //const previousX = lil_guy.clientX;
+    //const previousY = lil_guy.clientY;
+
+    const angle = calculateAngle(previousX, previousY, currentX, currentY) + "deg";
+
+    lil_guy.style.rotate = angle;
+
+    console.log(angle)
+    // Update previous coordinates
+
+
+    });
+
+    }
+
+//crying at button
+function cry() {
+
+document.getElementById("whitlegoy_img").src = "assets/images/whitle_goy_cry.png"
+
+    }
+function dry() {
+
+document.getElementById("whitlegoy_img").src = "assets/images/whitle_goy.png"
+
+    }
+</script>
 </html>
