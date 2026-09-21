@@ -8,7 +8,7 @@
     <title>Territory of Lobotomiss</title> <!-- Page title (appears in browser tab) -->
     <link rel="stylesheet" href="assets/styles/home.css">
     <script src="assets/scripts/scripts.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="icon" href="frog.ico">
     <style>
         Body {
@@ -61,9 +61,9 @@
             border-radius: 10px
         }
 
-        #lil_guy{
-        position:absolute;
-        rotate: 0deg;
+        #lil_guy {
+            position: absolute;
+            rotate: 0deg;
         }
     </style>
 
@@ -99,7 +99,7 @@
             <table style="width: 100%;">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-<!-- Collapsable is wonky, het script zelf heeft een eventlistner voor click dus als ik onclick gebruik doet die het op dubbelklik. bij onmouseover pakt die het om en om... -->
+                    <!-- Collapsable is wonky, het script zelf heeft een eventlistner voor click dus als ik onclick gebruik doet die het op dubbelklik. bij onmouseover pakt die het om en om... -->
                     <li><button class="collapsible" onmouseleave="collapse()" onmouseenter="collapse()">BLOG</button>
                         <div class="content">
                             <a href="blog.html">Blog Board</a>
@@ -117,7 +117,7 @@
     </div>
 </header>
 
-<img id="lil_guy" src="assets/images/lil_guy_stand.png" >
+<img id="lil_guy" src="assets/images/lil_guy_stand.png">
 
 
 <img src="assets/images/look_dog.gif">
@@ -164,9 +164,10 @@
                 mostly on the background during my internships). After working at Eurofins Heerenveen for a while I had
                 some medical issues caused by an old injury and the standard posture during lab work and I decided to
                 follow my interests in IT instead and that is why I now study at the HU. I hope to learn more about
-                servers, coding/softwaredevelopment, cybersecurity and a touch of AI model training.
+                servers, coding/softwaredevelopment, cybersecurity and a touch of AI modelling.
                 <br>
-                For classmates: If you are working on a project to do with chemistry and biology/microbiology/DNA then don't be shy
+                For classmates: If you are working on a project to do with chemistry and biology/microbiology/DNA then
+                don't be shy
                 to ask me anything if you think I might be of help. (˶ᵔ ᵕ ᵔ˶)
             </p>
             </p>
@@ -203,15 +204,14 @@
 
         </div>
         <div style="float: left; width: 100%;">
-            <h2>Things I wanna add</h2>
-            <li><b>SPICE:</b> Make one or 4 little whitle goy gifs and program it to follow the mouse around (still
-                finding out what may work best)</li>
-            <li><B>PROCASTINATION: </B>I added my dog, because <I>LOOK AT HIM GODDAMN IT!!! THATS A GOOD BOY!!!</I>
+            <h2>Things I Added last update</h2>
+            <li><b>Blog:</b> Acually use the goshdarn blog</li>
+            <li><B>Project: </B> I added a projectpage for a school assignment (also linking to some blog pages)
             </li>
             <br>
-
-
-
+            <h2>Things I still want to add</h2>
+            <li><B>Project: </B> Reyassify the Projectpage. (replacing current backround purely with the <i>POWER of CSS!!!</i>)  <br>
+ <br>
         </div>
     </div>
     <div style="border: 3px solid #864391;">
@@ -266,21 +266,22 @@
                     <p class="text">People skills [CHA]</p>
                 </div>
 
-            <div class="bar">
-                <div class="color" style="width: 30%; background-color: rgb(192, 25, 108);">
-                    <p class="text">Social battery [CHA]</p>
+                <div class="bar">
+                    <div class="color" style="width: 30%; background-color: rgb(192, 25, 108);">
+                        <p class="text">Social battery [CHA]</p>
+                    </div>
                 </div>
             </div>
-            </div>
             <br>
-                        <br>
+            <br>
             <p id="whitlegoy_txt">Please be patient, I'm just a whitle goy.</p><br>
             <img id="whitlegoy_img" src="assets/images/whitle_goy.png" class="responsive--" height="100px"
                 style="position:absolute;">
             <img id="pet_img" src="assets/images/petting.gif" style="left: -3%; top: -40px; position: relative;">
             <br>
 
-            <button onmouseenter="cry()" onmouseleave="dry()" onclick="explode(), pipe()" style=" font-size: 25px; border-radius: 5px" class="button"><b>DO NOT
+            <button onmouseenter="cry()" onmouseleave="dry()" onclick="explode(), pipe()"
+                style=" font-size: 25px; border-radius: 5px" class="button"><b>DO NOT
                     PRESS</b></button>
         </div>
         <div class="div-right" , style="border: 4px solid #864391; border-radius: 10px;">
@@ -309,101 +310,102 @@
             </p>
         </div>
     </div>
-    
+
 </body>
 </div>
 
-<script>    
+<script>
 
-function walk_ani() {document.getElementById("lil_guy").src = "assets/images/lil_guy_walk.gif"}
-
-
-let timer;
-const delay = 1000; // .3 second delay
-const longDelay = 3000; // 3 second delay
-
-document.addEventListener("mousemove", () => {
-    clearTimeout(timer); // Clear the previous timer
-    timer = setTimeout(() => {
-        console.log("Mouse is stationary");
-        document.getElementById("lil_guy").src ="assets/images/lil_guy_stand.png";
-    }, delay);
-});
-
-document.addEventListener("mousemove", () => {
-    //clearTimeout(timer); // Clear the previous timer
-    timer = setTimeout(() => {
-        console.log("Mouse is stationary long");
-        document.getElementById("lil_guy").src ="assets/images/lil_guy_cry.png";
-    }, longDelay);
-});
+    function walk_ani() { document.getElementById("lil_guy").src = "assets/images/lil_guy_walk.gif" }
 
 
-//making lil guy move niet aanzitten werkt priem!
-function walk() {
-    
+    let timer;
+    const delay = 1000; // .3 second delay
+    const longDelay = 3000; // 3 second delay
 
-
-$(document).mousemove(function(coordinate){
-  const currentX = event.pageX;
-    const currentY = event.pageY;
-
-    $("#lil_guy").stop().animate({left:currentX, top:currentY});
-
-});
-}
-
-//script to rotate lil guy, buggy! oplossing was uiteindelijk de img coordination pakken ipv previous mouse coordinate!!! >:D
-
-function calculateAngle(x1, y1, x2, y2) {
-    const radians = Math.atan2(y2 - y1, x2 - x1);
-    const degrees = (radians * 180 / Math.PI) -90;
-    return degrees;
-}
-
-
-
-
-const lil_guy = document.getElementById("lil_guy");
-
-
-function rotate() {
-
-document.addEventListener("mousemove", (event) => {
-    //lil_guy.style.rotate = "30deg";
-    const currentX = event.clientX;
-    const currentY = event.clientY;
-
-    const img = document.getElementById('lil_guy');
-    const imgRect = img.getBoundingClientRect();
-    const previousX = imgRect.left + window.screenX;
-    const previousY = imgRect.top + window.screenY;
-
-    //const previousX = lil_guy.clientX;
-    //const previousY = lil_guy.clientY;
-
-    const angle = calculateAngle(previousX, previousY, currentX, currentY) + "deg";
-
-    lil_guy.style.rotate = angle;
-
-    console.log(angle)
-    // Update previous coordinates
-
-
+    document.addEventListener("mousemove", () => {
+        clearTimeout(timer); // Clear the previous timer
+        timer = setTimeout(() => {
+            console.log("Mouse is stationary");
+            document.getElementById("lil_guy").src = "assets/images/lil_guy_stand.png";
+        }, delay);
     });
 
+    document.addEventListener("mousemove", () => {
+        //clearTimeout(timer); // Clear the previous timer
+        timer = setTimeout(() => {
+            console.log("Mouse is stationary long");
+            document.getElementById("lil_guy").src = "assets/images/lil_guy_cry.png";
+        }, longDelay);
+    });
+
+
+    //making lil guy move niet aanzitten werkt priem!
+    function walk() {
+
+
+
+        $(document).mousemove(function (coordinate) {
+            const currentX = event.pageX;
+            const currentY = event.pageY;
+
+            $("#lil_guy").stop().animate({ left: currentX, top: currentY });
+
+        });
     }
 
-//crying at button
-function cry() {
+    //script to rotate lil guy, buggy! oplossing was uiteindelijk de img coordination pakken ipv previous mouse coordinate!!! >:D
 
-document.getElementById("whitlegoy_img").src = "assets/images/whitle_goy_cry.png"
+    function calculateAngle(x1, y1, x2, y2) {
+        const radians = Math.atan2(y2 - y1, x2 - x1);
+        const degrees = (radians * 180 / Math.PI) - 90;
+        return degrees;
+    }
+
+
+
+
+    const lil_guy = document.getElementById("lil_guy");
+
+
+    function rotate() {
+
+        document.addEventListener("mousemove", (event) => {
+            //lil_guy.style.rotate = "30deg";
+            const currentX = event.clientX;
+            const currentY = event.clientY;
+
+            const img = document.getElementById('lil_guy');
+            const imgRect = img.getBoundingClientRect();
+            const previousX = imgRect.left + window.screenX;
+            const previousY = imgRect.top + window.screenY;
+
+            //const previousX = lil_guy.clientX;
+            //const previousY = lil_guy.clientY;
+
+            const angle = calculateAngle(previousX, previousY, currentX, currentY) + "deg";
+
+            lil_guy.style.rotate = angle;
+
+            console.log(angle)
+            // Update previous coordinates
+
+
+        });
 
     }
-function dry() {
 
-document.getElementById("whitlegoy_img").src = "assets/images/whitle_goy.png"
+    //crying at button
+    function cry() {
+
+        document.getElementById("whitlegoy_img").src = "assets/images/whitle_goy_cry.png"
+
+    }
+    function dry() {
+
+        document.getElementById("whitlegoy_img").src = "assets/images/whitle_goy.png"
 
     }
 </script>
+
 </html>
