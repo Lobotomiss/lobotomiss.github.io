@@ -1,118 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Territory of Lobotomiss</title> <!-- Page title (appears in browser tab) -->
-        <link rel="icon" href="../frog.ico"> <!-- Favicon (optional) -->
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Territory of Lobotomiss</title>
+    <link rel="icon" href="../frog.ico">
     <style>
+        /* custom fonts */
+        @font-face {
+            font-family: 'Rokkitt ExtraBold';
+            src: url('Rokkitt-ExtraBold.ttf');
+        }
+
+        /* root elements */
         html {
-            background-color: rgb(17, 25, 36);
+            /* Color Theme (CSS variables) */
+            /* Text colors */
+            --theme-main-text-color: white;
+            --theme-text-hover-color: coral;
+
+            /* Background colors */
+            --theme-yellow-background: yellow;
+            --theme-hover-background: coral;
+            --theme-light-background: hsl(210, 31%, 20%); /* derived from poster */
+            --theme-medium-background: hsl(210, 32%, 15%); /* derived from poster */
+            --theme-dark-background: hsl(215, 36%, 10%); /* this was rgb(17, 25, 36), but hsl() is easier to work with */
         }
         body {
-            background: url("../assets/images/Infographic.png") no-repeat center;
-            overflow-y: visible;
-            background-attachment: scroll;
-            position: absolute center;
-            top: 0px;
+            background-color: var(--theme-dark-background);
+        }
+
+        /* global navigation box */
+        nav.global_nav {
+            position: fixed;
             left: 0px;
-            height: 2000px;
-           
+            top: 0px;
+            font-size: 1.5rem; /* 'rem' is a unit relative to the root element's (<html>) font size. 1rem is usually 16px. */
+            border-bottom-right-radius: 0.25rem;
+            background-color: var(--theme-yellow-background);
+            box-shadow: 0 0 5px var(--theme-dark-background);
+            contain: paint; /* prevents child elements' backgrounds from escaping the box. */
+            z-index: 100; /* to prevent other elements from appearing in front of this one. */
+        }
+        nav.global_nav a {
+            display: inline-block;
+            margin: 0;
+            padding: 0.25em 0.5em; /* 'em' is a unit relative to the element's font-size. 1em = 100% font-size. */
+            color: rgb(17, 25, 36);
+            font-weight: bold;
+            text-decoration: none; /* remove underline */
+        }
+        nav.global_nav a:hover {
+            /* this styling is applied when the user hovers their mouse over this element */
+            background-color: var(--theme-hover-background);
         }
 
+        /* page layout elements */
+        main {
+            display: flex;
+            flex-flow: column;
+            justify-content: stretch;
+            gap: 1rem;
 
-        current_topics {
-            color: #ffffff;
-            margin: 0px;
-            overflow: auto;
-            position: relative;
-            top: 270px;
-            left: 10px;
-            
+            margin: 4rem auto; /* the 'auto' helps to center it */
+            max-width: calc(100vw - 6rem); /* 100vw = 100% page width */
+        }
+        header,
+        section {
+            display: flex;
+            flex-flow: column;
+
+            position: relative; /* provide a valid parent for any `position: absolute|sticky` children */
+            padding: 1rem;
+            color: var(--theme-main-text-color);
+            border-radius: 0.5rem;
+            contain: paint; /* prevent overflow from children */
+        }
+        header {
+            color: var(--theme-light-background);
+            background-color: var(--theme-yellow-background);
+        }
+        header :is(h1, h2) {
+            margin: 0;
+            font-size: 3rem;
+        }
+        header h1 {
+            font-family: 'Rokkitt ExtraBold';
+            font-size: 4rem;
+        }
+        header h2 {
+            font-family: Helvetica, Arial;
+            font-style: italic;
+        }
+        div.section-row {
+            /* create a flexbox row to place sections in */
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: stretch;
+            gap: 1rem;
+        }
+        section {
+            flex-grow: 1; /* allow sections to take up full width of `div.section-row` */
+
+            gap: 1rem; /* adds a gap between flex children */
+            background-color: var(--theme-medium-background);
+        }
+        section.light-bg {
+            /* section with a lighter background */
+            background-color: var(--theme-light-background);
+        }
+        section > * {
+            margin: 0;
+        }
+        section h3 {
+            font-family: 'Rokkitt ExtraBold';
+            font-size: 2.5rem;
+        }
+        section h4 {
+            margin-top: 0.5em;
+            font-family: Helvetica, Arial;
+            font-size: 1.75rem;
+        }
+        section ul, ol, p {
+            font-size: 1.5rem;
         }
 
-        body interview_gilde {
-            color: #ffffff;
-            margin: 0px;
-            overflow: auto;
-            position: relative;
-            top: 20px;
-            left: 310px
-        }
-
-        interview_proff {
-            color: #ffffff;
-            margin: 0px;
-            overflow: auto;
-            position: relative;
-            top: 210px;
-            left: 310px
-        }
-
-        li {
-            font-size: 28px;
-            list-style: none;
-        }
+        /* various elements */
         a {
-            color: #ffffff;
-            font-family:'Gill Sans MT',  sans-serif;
+            color: var(--theme-main-text-color);
+            font-family: 'Gill Sans MT', sans-serif;
         }
-        img { 
-            width: 100%;
+        a:hover {
+            color: var(--theme-text-hover-color);
         }
-        button {
-            position: fixed; 
-            left: 0px; 
-            top: 0px; 
-            width: 10%; 
-            height: 5%;
-            font-size: 2vh;
-            background-color: yellow;;
+        img {
+            max-width: 100%;
         }
-
-.container {
-  display: flex;
-  justify-content: center; /* horizontal centering */
-  align-items: center;     /* vertical centering */
-}
-
-.centered-div {
-  width: 40%;
-  height: 1800px;
-  width: 1400px;
-}
     </style>
-    <nav>
-    <button><a style="color: rgb(17, 25, 36);" href="../projects.html"><b>Back to projects</b></a></button>
+</head>
+<body>
+    <nav class="global_nav">
+        <a href="../projects.html">&larrhk; Back to projects</a>
     </nav>
-    <body class="container">
-        <div style="position: center;  " class="centered-div">
-            <current_topics>
-                <li><a href="https://simbian.ai/blog/ai-in-cybersecurity-2026-complete-guide"> AI in CS</a></li> <br><br>
-                <li><a href="https://data.europa.eu/en/news-events/news/eu-digital-omnibus-update-simplifying-europes-digital-rulebook"> EU digital omnibus</a></li></li><br><br>
-                <li><a href="https://digital-strategy.ec.europa.eu/en/policies/nis2-directive"> NIS2</a></li></li><br><br>
-                <li><a href="https://gdprlocal.com/coppa-complete-guide/"> COPPA</a></li></li><br><br>
-                <li><a href="https://www.eiopa.europa.eu/digital-operational-resilience-act-dora_en"> DORA & Sovereignty</a></li></li>
-            </current_topics>
-
-            <interview_gilde>
-                    <li><a href="/rants/hidden A.html"> Luka d.J.: CS gilde lid</a></li><br><br>
-                    <li><a href="/rants/hidden B.html"> Roland: CS gilde meester</a></li>
-
-            </interview_gilde>
-
-            <interview_proff>
-                <nav>
-                    <li><a href="/rants/2026.09.10 A.html"> DCC reservist</a></li><br><br>
-                    <li><a href="/rants/2026.09.10 B.html"> Open infrastructure designer</a></li>
-                </nav>
-            </interview_proff>
-
-<div style="position: relative; top: 460px;"><img src="../assets/images/graph.png"> </div>
-
+    <main>
+        <header>
+            <h1>Cybersecurity</h1>
+            <h2>An overview</h2>
+        </header>
+        <div class="section-row">
+            <section class="light-bg">
+                <h3>Current topics</h3>
+                <ul>
+                    <li>
+                        <a href="https://simbian.ai/blog/ai-in-cybersecurity-2026-complete-guide">AI in CS</a>
+                    </li>
+                    <li>
+                        <a href="https://data.europa.eu/en/news-events/news/eu-digital-omnibus-update-simplifying-europes-digital-rulebook">EU digital omnibus</a>
+                    </li>
+                    <li>
+                        <a href="https://digital-strategy.ec.europa.eu/en/policies/nis2-directive">NIS2</a>
+                    </li>
+                    <li>
+                        <a href="https://gdprlocal.com/coppa-complete-guide/">COPPA</a>
+                    </li>
+                    <li>
+                        <a href="https://www.eiopa.europa.eu/digital-operational-resilience-act-dora_en">DORA & Sovereignty</a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Interviews</h3>
+                <h4>Cybersec Guild</h4>
+                <ul>
+                    <li><a href="/rants/hidden A.html">Luka d.J.: CS gilde lid</a></li>
+                    <li><a href="/rants/hidden B.html">Roland: CS gilde meester</a></li>
+                </ul>
+                <h4>Professionals</h4>
+                <ul>
+                    <li><a href="/rants/2026.09.10 A.html">DCC reservist</a></li>
+                    <li><a href="/rants/2026.09.10 B.html">Open infrastructure designer</a></li>
+                </ul>
+            </section>
+            <section class="light-bg">
+                <h3>Job Market</h3>
+                <img src="../assets/images/CS-job-supply-demand.png">
+            </section>
         </div>
+        <section>
+            <h3>Overview of CI & CS</h3>
+            <img src="../assets/images/graph.png">
+        </section>
+    </main>
 
-    </body>
+</body>
+
 </html>
