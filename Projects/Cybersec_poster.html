@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Territory of Lobotomiss</title> <!-- Page title (appears in browser tab) -->
-        <link rel="icon" href="../frog.ico"> <!-- Favicon (optional) -->
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Territory of Lobotomiss</title>
+    <link rel="icon" href="../frog.ico">
     <style>
+        /* root elements */
         html {
             background-color: rgb(17, 25, 36);
         }
@@ -19,21 +18,56 @@
             top: 0px;
             left: 0px;
             height: 2000px;
-           
         }
 
+        /* global navigation box */
+        nav.global_nav {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            font-size: 1.5rem; /* 'rem' is a unit relative to the root element's (<html>) font size. 1rem is usually 16px. */
+            border-bottom-right-radius: 0.25rem;
+            background-color: yellow;
+            overflow: hidden; /* prevents child elements' backgrounds from escaping the box. */
+            z-index: 100; /* to prevent other elements from appearing in front of this one. */
+        }
+        nav.global_nav a {
+            display: inline-block;
+            margin: 0;
+            padding: 0.25em 0.5em; /* 'em' is a unit relative to the element's font-size. 1em = 100% font-size. */
+            color: rgb(17, 25, 36);
+            font-weight: bold;
+            text-decoration: none; /* remove underline */
+        }
+        nav.global_nav a:hover {
+            /* this styling is applied when the user hovers their mouse over this element */
+            background-color: coral;
+        }
 
-        current_topics {
+        /* main page content */
+        .container {
+            display: flex;
+            justify-content: center;
+            /* horizontal centering */
+            align-items: center;
+            /* vertical centering */
+        }
+        div.centered-div {
+            width: 40%;
+            height: 1800px;
+            width: 1400px;
+        }
+
+        /* page sections */
+        .current_topics {
             color: #ffffff;
             margin: 0px;
             overflow: auto;
             position: relative;
             top: 270px;
             left: 10px;
-            
         }
-
-        body interview_gilde {
+        .interview_gilde {
             color: #ffffff;
             margin: 0px;
             overflow: auto;
@@ -41,8 +75,7 @@
             top: 20px;
             left: 310px
         }
-
-        interview_proff {
+        .interview_proff {
             color: #ffffff;
             margin: 0px;
             overflow: auto;
@@ -51,68 +84,65 @@
             left: 310px
         }
 
+        /* various elements */
         li {
             font-size: 28px;
             list-style: none;
         }
         a {
             color: #ffffff;
-            font-family:'Gill Sans MT',  sans-serif;
+            font-family: 'Gill Sans MT', sans-serif;
         }
-        img { 
+        img {
             width: 100%;
         }
-        button {
-            position: fixed; 
-            left: 0px; 
-            top: 0px; 
-            width: 10%; 
-            height: 5%;
-            font-size: 2vh;
-            background-color: yellow;;
-        }
-
-.container {
-  display: flex;
-  justify-content: center; /* horizontal centering */
-  align-items: center;     /* vertical centering */
-}
-
-.centered-div {
-  width: 40%;
-  height: 1800px;
-  width: 1400px;
-}
     </style>
-    <nav>
-    <button><a style="color: rgb(17, 25, 36);" href="../projects.html"><b>Back to projects</b></a></button>
+</head>
+<body class="container">
+    <nav class="global_nav">
+        <a href="../projects.html">&larrhk; Back to projects</a>
     </nav>
-    <body class="container">
-        <div style="position: center;  " class="centered-div">
-            <current_topics>
-                <li><a href="https://simbian.ai/blog/ai-in-cybersecurity-2026-complete-guide"> AI in CS</a></li> <br><br>
-                <li><a href="https://data.europa.eu/en/news-events/news/eu-digital-omnibus-update-simplifying-europes-digital-rulebook"> EU digital omnibus</a></li></li><br><br>
-                <li><a href="https://digital-strategy.ec.europa.eu/en/policies/nis2-directive"> NIS2</a></li></li><br><br>
-                <li><a href="https://gdprlocal.com/coppa-complete-guide/"> COPPA</a></li></li><br><br>
-                <li><a href="https://www.eiopa.europa.eu/digital-operational-resilience-act-dora_en"> DORA & Sovereignty</a></li></li>
-            </current_topics>
-
-            <interview_gilde>
-                    <li><a href="/rants/hidden A.html"> Luka d.J.: CS gilde lid</a></li><br><br>
-                    <li><a href="/rants/hidden B.html"> Roland: CS gilde meester</a></li>
-
-            </interview_gilde>
-
-            <interview_proff>
-                <nav>
-                    <li><a href="/rants/2026.09.10 A.html"> DCC reservist</a></li><br><br>
-                    <li><a href="/rants/2026.09.10 B.html"> Open infrastructure designer</a></li>
-                </nav>
-            </interview_proff>
-
-<div style="position: relative; top: 460px;"><img src="../assets/images/graph.png"> </div>
-
+    <div class="centered-div">
+        <div class="current_topics">
+            <ul>
+                <li>
+                    <a href="https://simbian.ai/blog/ai-in-cybersecurity-2026-complete-guide">AI in CS</a>
+                </li>
+                <li>
+                    <a href="https://data.europa.eu/en/news-events/news/eu-digital-omnibus-update-simplifying-europes-digital-rulebook">EU digital omnibus</a>
+                </li>
+                <li>
+                    <a href="https://digital-strategy.ec.europa.eu/en/policies/nis2-directive">NIS2</a>
+                </li>
+                <li>
+                    <a href="https://gdprlocal.com/coppa-complete-guide/">COPPA</a>
+                </li>
+                <li>
+                    <a href="https://www.eiopa.europa.eu/digital-operational-resilience-act-dora_en">DORA & Sovereignty</a>
+                </li>
+            </ul>
         </div>
 
-    </body>
+        <div class="interview_gilde">
+            <ul>
+                <li><a href="/rants/hidden A.html">Luka d.J.: CS gilde lid</a></li>
+                <li><a href="/rants/hidden B.html">Roland: CS gilde meester</a></li>
+            </ul>
+        </div>
+
+        <div class="interview_proff">
+            <ul>
+                <li><a href="/rants/2026.09.10 A.html">DCC reservist</a></li>
+                <li><a href="/rants/2026.09.10 B.html">Open infrastructure designer</a></li>
+            </ul>
+        </div>
+
+        <div style="position: relative; top: 460px;">
+            <img src="../assets/images/graph.png">
+        </div>
+
+    </div>
+
+</body>
+
 </html>
