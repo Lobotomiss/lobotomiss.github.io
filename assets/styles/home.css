@@ -62,10 +62,9 @@ li {
   background-color: rgb(156, 99, 197);
   font-size: 25px;
   border-radius: 5px;
-  cursor: url('../cursor/snipe.cur'), auto;
+  cursor: url("../cursor/snipe.cur"), auto;
   width: 150px;
   font-size: 25px;
-  border-radius: 5px;
 }
 
 .sidebar-left {
@@ -91,7 +90,6 @@ li {
   background-color: rgb(79, 13, 90);
   display: flex;
   justify-content: center;
-
 }
 
 .topbar ul li a {
@@ -100,8 +98,8 @@ li {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 20px;
-      cursor: url('../cursor/snipe.cur'), auto;
-    font-family: "Times New Roman", Times, serif;
+  cursor: url("../cursor/snipe.cur"), auto;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .topbar ul li button {
@@ -110,13 +108,12 @@ li {
   padding: 14px 16px;
   text-decoration: none;
   text-align: center;
-  background-color:rgb(79, 13, 90);
+  background-color: rgb(79, 13, 90);
   font-size: 20px;
   border-radius: 0px;
   border-color: rgba(174, 129, 196, 0);
-  cursor: url('../cursor/snipe.cur'), auto;
+  cursor: url("../cursor/snipe.cur"), auto;
   font-family: "Times New Roman", Times, serif;
-
 }
 
 .topbar ul {
@@ -126,13 +123,12 @@ li {
   width: 100%;
   list-style-position: inside;
 }
-.topbar ul div{
+.topbar ul div {
   position: relative;
   top: 0px;
   left: 0;
   width: 100%;
 }
-
 
 /*navbar collapsable yoinked from online */
 .collapsible {
@@ -146,7 +142,8 @@ li {
   font-size: 15px;
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   background-color: rgb(98, 27, 110);
 }
 
@@ -155,7 +152,6 @@ li {
   overflow: hidden;
   background-color: rgb(127, 69, 138);
 }
-
 
 /* oude navbar styling
 styling for navigationbar

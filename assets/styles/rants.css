@@ -1,3 +1,7 @@
+html {
+  --blue: rgb(55, 242, 255);
+}
+
 h1 {
   margin: 25px;
   color: rgb(55, 242, 255);
@@ -80,4 +84,16 @@ ul li a {
 
 li a {
   color: rgb(55, 242, 255);
+}
+
+footer {
+  width: 100vi;
+  background-color: #000a0d;
+  border-color: var(--blue);
+  border-top: solid;
+  color: var(--blue);
+  left: -3px;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
 }
