@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Territory of Lobotomiss</title>
+        <link rel="icon" href="../frog.ico" />
+        <style>
+            /* custom fonts */
+            @font-face {
+                font-family: "Rokkitt ExtraBold";
+                src: url("Rokkitt-ExtraBold.ttf");
+            }
+
+            /* root elements */
+            html {
+                /* Color Theme (CSS variables) */
+                /* Text colors */
+                --theme-main-text-color: white;
+                --theme-text-hover-color: coral;
+
+                /* Background colors */
+                --theme-yellow-background: yellow;
+                --theme-hover-background: coral;
+                --theme-light-background: hsl(210, 31%, 20%); /* derived from poster */
+                --theme-medium-background: hsl(210, 32%, 15%); /* derived from poster */
+                --theme-dark-background: hsl(
+                    215,
+                    36%,
+                    10%
+                ); /* this was rgb(17, 25, 36), but hsl() is easier to work with */
+            }
+            body {
+                background-color: var(--theme-dark-background);
+            }
+
+            /* global navigation box */
+            nav.global_nav {
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                font-size: 1.5rem; /* 'rem' is a unit relative to the root element's (<html>) font size. 1rem is usually 16px. */
+                border-bottom-right-radius: 0.25rem;
+                background-color: var(--theme-yellow-background);
+                box-shadow: 0 0 5px var(--theme-dark-background);
+                contain: paint; /* prevents child elements' backgrounds from escaping the box. */
+                z-index: 100; /* to prevent other elements from appearing in front of this one. */
+            }
+            nav.global_nav a {
+                display: inline-block;
+                margin: 0;
+                padding: 0.25em 0.5em; /* 'em' is a unit relative to the element's font-size. 1em = 100% font-size. */
+                color: rgb(17, 25, 36);
+                font-weight: bold;
+                text-decoration: none; /* remove underline */
+            }
+            nav.global_nav a:hover {
+                /* this styling is applied when the user hovers their mouse over this element */
+                background-color: var(--theme-hover-background);
+            }
+
+            /* page layout elements */
+            main {
+                display: flex;
+                flex-flow: column;
+                justify-content: stretch;
+                gap: 1rem;
+
+                margin: 4rem auto; /* the 'auto' helps to center it */
+                max-width: calc(100vw - 6rem); /* 100vw = 100% page width */
+            }
+            header,
+            section {
+                display: flex;
+                flex-flow: column;
+
+                position: relative; /* provide a valid parent for any `position: absolute|sticky` children */
+                padding: 1rem;
+                color: var(--theme-main-text-color);
+                border-radius: 0.5rem;
+                contain: paint; /* prevent overflow from children */
+            }
+            header {
+                color: var(--theme-light-background);
+                background-color: var(--theme-yellow-background);
+            }
+            header :is(h1, h2) {
+                margin: 0;
+                font-size: 3rem;
+            }
+            header h1 {
+                font-family: "Rokkitt ExtraBold";
+                font-size: 4rem;
+            }
+            header h2 {
+                font-family: Helvetica, Arial;
+                font-style: italic;
+            }
+            .ondertitel {
+                font-family: Helvetica, Arial;
+                font-style: italic;
+            }
+            div.section-row {
+                /* create a flexbox row to place sections in */
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: stretch;
+                gap: 1rem;
+            }
+            section {
+                flex-grow: 1; /* allow sections to take up full width of `div.section-row` */
+                gap: 1rem; /* adds a gap between flex children */
+                background-color: var(--theme-medium-background);
+            }
+            section.text {
+                max-width: calc(48.2% - 1rem);
+            }
+            section.light-bg {
+                /* section with a lighter background */
+                background-color: var(--theme-light-background);
+            }
+            section > * {
+                margin: 0;
+            }
+            section h3 {
+                font-family: "Rokkitt ExtraBold";
+                font-size: 2.5rem;
+            }
+            section h4 {
+                margin-top: 0.5em;
+                font-family: Helvetica, Arial;
+                font-size: 1.75rem;
+            }
+            section ul,
+            ol,
+            p {
+                font-size: 1.5rem;
+            }
+
+            /* various elements */
+            a {
+                color: var(--theme-main-text-color);
+                font-family: "Gill Sans MT", sans-serif;
+            }
+            a:hover {
+                color: var(--theme-text-hover-color);
+            }
+            img {
+                max-width: 100%;
+            }
+            .job-market {
+                flex-grow: 1;
+                width: 40%;
+            }
+            details {
+                font-size: 14px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav class="global_nav">
+            <a href="../projects.html">&larrhk; Back to projects</a>
+        </nav>
+        <main>
+        <section>
+            <h2>
+                <i>Redundantie plannen bij Defensie, glasvezelnetwerken beheren, of AI servers hosten? Dat doe je bij...</i>
+            </h2>
+        </section>
+            <header>
+                <h1>Cloud & Infra</h1>
+                <p class="ondertitel">
+                    <b>Van Gramsec; Info/poster en design door Bart</b>
+                </p>
+            </header>
+            <div class="section-row">
+                <section class="light-bg text">
+                    <h3>Actueel</h3>
+                    <ul>
+                        <li>
+                            <a href="https://en.wikipedia.org/wiki/OpenAI%E2%80%93HuggingFace_incident">OpenAI-HuggingFace incident</a>
+                            <details open>
+                                <summary>lees meer</summary>
+                                Als de beveiliging van je Cloud-netwerk niet op orde is, kun je in de problemen komen. Met firewalls, isolatie en andere methoden kun je hier als Infrastructuur deisgner een goede basis voor leggen.
+                            </details>
+                        </li>
+                    </ul>
+                </section>
+                <section class="text">
+                    <h3>Interviews</h3>
+                    <h4>Infrastructuur veteraan</h4>
+                    <ul>
+                        <li><a href="../rants/hidden C.html">Theo, netwerkbeheerder, It-specialist, oud-infrastructuur manager bij Defensie</a></li>
+                        <details open>
+                            <summary>lees meer</summary>
+                            Met meer dan 34 jaar ervaring is dit de meest ervaren professional die ik ken. Hij heeft met meerdere functies bij Defensie gewerkt, en onder andere meegeholpen met infrastructuur opzetten voor het onderzoek naar MH17. Nu werkt hij als netwerkbeheerder en heeft een eigen bedrijf wat IT-diensten als online werkplekken levert.
+                        </details>
+                    </ul>
+                </section>
+                <section class="light-bg text">
+                    <h3>Invloed van AI?</h3>
+                    <p>AI heeft vooral invloed op de ontwikkeling van software, maar netwerk- en infrastructuurbeheerders doen ook installatiewerk wat niet makkelijk met AI vervangen wordt.</p>
+                </section>
+            </div>
+            <section>
+                <h3>See also</h3>
+                <p>
+                    <ul>
+                        <li>
+                            <a href="Cybersec_poster.html">Cybersecurity</a>
+                        </li>
+                    </ul>
+                </p>
+            </section>
+        </main>
+    </body>
+</html>
