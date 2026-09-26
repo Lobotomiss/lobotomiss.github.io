@@ -1,73 +1,185 @@
+html {
+    --background-color-dark: rgb(0, 12, 103);
+    --background-color-mid: #2663ad;
+    --background-color-light: #4989d8;
+    --grid-color: #3f7dc9;
+    --text-color: white;
+    --text-color-b: rgb(159, 192, 236);
+
+    /*page font*/
+    font-family: "Courier New", Courier, monospace;
+}
+
+/*general styling*/
 h1 {
-            color: rgb(255,255,255);
-            background-color: #2663ad;
-        }
-        p {
-            color: rgb(255,255,255);
-            text-align: center;
-            
-        }
+    color: rgb(255, 255, 255);
+    background-color: var(--background-color-dark);
+}
 
-        Body {
-        text-align: center;
-        background-color: #2663ad;
-        }
+h2 {
+    text-align: center;
+    color: var(--text-color);
+}
 
-        h2 {
-            text-align: center;
-            color: rgb(255,255,255);
-        }
+p {
+    color: var(--text-color);
+    text-align: center;
+}
 
-        li {
-        text-align: center;
-        color: rgb(255,255,255); 
-        }
-        
-        button{
-            background-color: rgb(0, 0, 209);
-            font-size: 25px; 
-            border-radius: 5px;
-                }
-        
+li {
+    text-align: center;
+    color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+}
+
+details {
+    color: var(--text-color-b);
+}
+
+Body {
+    top: 50px;
+    position: relative;
+    text-align: center;
+    background-color: var(--background-color-mid);
+    text-align: center;
+    /* The grid*/
+    background-size: 100px 100px;
+    /*change to adjust the grid block size*/
+    background-image:
+        linear-gradient(to right, var(--grid-color) 2px, transparent 2px),
+        /*adjust the thiccness and color of the lines here*/
+        linear-gradient(to bottom, var(--grid-color) 2px, transparent 2px);
+}
+
+button {
+    background-color: var(--background-color-dark);
+    font-size: 25px;
+    width: 150px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+/*formatting for the middle and side-bars*/
 .sidebar-left {
     float: left;
-    width: 12.5%; /* Adjust width as needed */
-
+    width: 12.5%;
+    /* Adjust width as needed */
+    text-align: center;
+    height: 1077px;
+    overflow: auto;
+    padding-top: 1px;
+    margin-top: -1px;
 }
 
 .main-content {
     float: left;
-    width: 75%; /* Adjust width as needed */
-    background-color: #2663ad;
+    width: 75%;
+    /* Adjust width as needed */
+    background-color: var(--background-color-light);
     border-radius: 10px;
+    border: 2px solid #ffffff;
+    margin: 0px;
+    overflow: auto;
+    padding-top: 1px;
+    margin-top: -1px;
 }
 
 .sidebar-right {
     float: right;
-    width: 12.0%; /* Adjust width as needed */
-
+    width: 12%;
+    /* Adjust width as needed */
+    text-align: center;
+    height: 1077px;
+    overflow: auto;
+    padding-top: 1px;
+    margin-top: -1px;
 }
 
 /*styling for navigationbar*/
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: rgb(0, 12, 103);
-  display: flex;
-  justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color-dark);
+    display: flex;
+    justify-content: center;
 }
 
 ul li a {
-  display: block;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-ul {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
+ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*hierin gaan de blueprint pictures*/
+.blueprint {
+    position: absolute;
+    z-index: -1;
+}
+
+/*rotation animation for gears*/
+.rotate {
+    animation: rotation 2s infinite linear;
+    position: absolute;
+    z-index: -1;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.rotate_b {
+    animation: rotation_b 2s infinite linear;
+    position: absolute;
+    z-index: -1;
+}
+
+@keyframes rotation_b {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-1turn);
+    }
+}
+
+/*Div boxes for the projects*/
+div .project {
+    background-color: var(--background-color-mid);
+    /*padding for outline dashes*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: solid var(--background-color-light);
+    outline-offset: -6px;
+    outline-style: dashed;
+    text-align: left;
+    text-justify: auto;
+    /*border*/
+    border-color: var(--background-color-light);
+    border-style: solid;
+    border-radius: 20px;
+}
