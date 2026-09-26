@@ -1,5 +1,6 @@
 function explode() {
             const audio = new Audio('assets/sounds/x_files.mp3');
+            isExploded=true;
             audio.play();
 
             document.getElementById("whitlegoy_txt").innerHTML = "AAaaaAAaAAAAAaaaaAAaaauuuughghhghhg"

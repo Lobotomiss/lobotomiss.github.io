@@ -412,12 +412,16 @@
 
         //crying at button
         function cry() {
+            if (!isExploded) {
             document.getElementById("whitlegoy_img").src =
                 "assets/images/whitle_goy_cry.png";
+                }
         }
         function dry() {
+            if (!isExploded) {
             document.getElementById("whitlegoy_img").src =
                 "assets/images/whitle_goy.png";
+                }
         }
     </script>
 
