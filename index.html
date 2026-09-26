@@ -340,6 +340,8 @@
     </div>
 
     <script>
+        
+
         function walk_ani() {
             document.getElementById("lil_guy").src = "assets/images/lil_guy_walk.gif";
         }
@@ -410,15 +412,19 @@
             });
         }
 
+
         //crying at button
+        Exploded=false;
         function cry() {
-            if (!isExploded) {
+            
+            if (!Exploded) {
             document.getElementById("whitlegoy_img").src =
                 "assets/images/whitle_goy_cry.png";
                 }
         }
         function dry() {
-            if (!isExploded) {
+            
+            if (!Exploded) {
             document.getElementById("whitlegoy_img").src =
                 "assets/images/whitle_goy.png";
                 }
